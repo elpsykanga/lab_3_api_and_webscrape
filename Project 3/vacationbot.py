@@ -18,7 +18,7 @@ class volare:
         self.dest = dest
 c1 = volare
 c1.start = 'LIS'
-
+print(c1.start)
 ### Insert Functions That will be used
 locations=pd.read_csv('lab_3_api_and_webscrape\Project 3\locations.csv')
 cunt=pd.read_csv('lab_3_api_and_webscrape\Project 3\IATA.csv')
@@ -233,13 +233,11 @@ def app_data(z,act):
     country = input('Which of these countries interests you?').strip().lower().capitalize()
     while country not in z:
         print('error: try again')
-        country = input('Which of these countries interests you').strip().lower().capitalize()
-    q = locations
-    bot = 'Alright based on your decisions I think its best you go to '+c1.dest+'. Now let us begin to plan your trip...'
-    talk_speed(bot,0.001)
-    waiting(1)
-    bot1 = "Ive got eveything I need. You are going to "+c1.dest+', '+ c1.stop
-
+        Country = input('Which of these countries interests you').strip().lower().capitalize()
+        
 
 
 app_title()
+# q=locations['Destinations',''].loc[locations['Activities']==act].unique()
+#     q = list((q['Destinations'].loc[q['Countries']== country]).unique())
+#     c1.dest = rd.choice(q)
